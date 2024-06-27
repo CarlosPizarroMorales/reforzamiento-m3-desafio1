@@ -1,0 +1,302 @@
+/* ESTILOS BASE Y VARIABLES */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --font: 400 16px "Poppins", sans-serif;
+  --line-height: 1.5;
+  --font-color: #000000;
+  --font-color-tag: #ffffff;
+  --bg-html: #e93e30;
+  --bg-js: #f7e018;
+  --bg-css: #299ed5;
+  --bg-react: #292c33;
+  --bg-vue: #67c770;
+  --bg-bootstrap: #563d7c;
+}
+
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: var(--font);
+  line-height: var(--line-height);
+  color: var(--font-color);
+  max-width: 100%;
+}
+
+/* ESTILOS GENERALES */
+.container {
+  width: clamp(1000px, 82vw, 1200px);
+  margin: 0 auto;
+}
+
+.footer,
+.navbar {
+  height: 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.novedades-cards-container,
+.popular-tags-container,
+.popular-cards-container,
+.tag-cards-container {
+  display: flex;
+}
+
+.novedades-container {
+  height: calc(100vh - 130px)
+}
+
+.novedades-horizontal-cards-container {
+  margin-left: 2rem;
+}
+
+.popular-tags-container {
+  margin-bottom: 2rem;
+  justify-content: space-between;
+}
+
+.popular-cards-container {
+  width: 650px;               /* respeta maqueta 1280px */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  .card {
+    width: 300px;
+  }
+}
+
+.tag-cards-container {
+  flex-direction: column;
+}
+
+/* ESTILOS POR COMPONENTE */
+.heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 2rem 0;
+}
+
+.link-more * {
+  text-decoration: none;
+  color: var(--font-color);
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__img {
+  width: 55px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+
+.logo__brand {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* user */
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user__avatar {
+  width: 40px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.user__name {
+  margin: 0;
+  /* font-weight: 500; */ /* En realidad no queda bien */
+}
+
+/* tag */
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding: 0.5rem 1rem;
+  width: 300px;
+  border-radius: 16px;
+}
+
+.tag:not(tag:last-child) {
+  margin-bottom: 2rem;
+}
+
+.tag__img {
+  height: 75px;
+}
+
+.tag__name {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--font-color-tag);
+}
+
+.tag--html {
+  background-color: var(--bg-html);
+}
+
+.tag--js {
+  background-color: var(--bg-js);
+}
+
+.tag--css {
+  background-color: var(--bg-css);
+}
+
+.tag--react {
+  background-color: var(--bg-react);
+}
+
+.tag--vue {
+  background-color: var(--bg-vue);
+}
+
+.tag--bootstrap {
+  background-color: var(--bg-bootstrap);
+}
+
+/* card */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.card__title,
+.card--horizontal__title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card--main {
+
+  .user__avatar {
+    width: 60px;
+  }
+
+  .user__name {
+    font-size: 24px;
+  }
+
+  .card--main__date {
+    margin-top: 1rem;
+  }
+
+  .card--main__title {
+    margin: 1rem 0;
+  }
+}
+
+.card--main__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.main-card-img-wrapper {
+  width: 600px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+}
+
+.card--main__img {
+  max-width: initial;
+  width: 1000px;
+}
+
+
+.card--horizontal {
+  width: 400px;
+  height: 145px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card--horizontal:not(.card--horizontal:last-child) {
+  margin-bottom: 2rem;
+}
+
+.card-horizontal-img-wrapper {
+  width: 189px;
+  height: 145px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-radius: 16px;
+}
+
+.card--horizontal__img {
+  max-width: initial;
+  width: 220px;
+}
+
+.card--horizontal__title {
+  margin: 0.5rem 0;
+}
+
+.card-horizontal-body-wrapper {
+  padding-left: 1rem;
+}
+
+.popular-cards-container {
+
+  .card {
+    margin-bottom: 2.5rem;
+  }
+  .card__date {
+    margin-top: 1rem;
+  }
+
+  .card__title {
+    margin: 1rem 0;
+  }
+}
+
+.popular-card-img-wrapper {
+  width: 298px;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+
+  .card__img {
+    max-width: initial;
+  }
+
+  .card__img--vue {
+    width: 310px;
+  }
+
+  .card__img--api {
+    width: 310px;
+  }
+
+  .card__img--sass {
+    width: 410px;
+  }
+
+  .card__img--bootstrap {
+    width: 630px;
+  }
+}
+
